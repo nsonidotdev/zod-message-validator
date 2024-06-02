@@ -1,5 +1,7 @@
 {
   "name": "zod-message-validator",
+  "license": "MIT",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -7,8 +9,8 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc"
   },
-  "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.27.5",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   }
