@@ -19,7 +19,13 @@ export class MapSchema<const TName extends string = string, TItem = any, const T
                         // Check keys 
                         const keys = Object.keys(value);
 
-                        return keys.every(key => mapKeys.includes(key)) && mapKeys.length === keys.length;
+                        if (mapKeys instanceof Array) {
+                            return keys.every(key => mapKeys.includes(key)) && mapKeys.length === keys.length;
+                        }
+
+                        if (typeof mapKeys === 'string') {
+                            return keys.length === 1 && keys[0] === mapKeys;
+                        }
                     })
             }
 
