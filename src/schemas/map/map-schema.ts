@@ -1,5 +1,5 @@
 import { Schema, z } from "zod";
-import { BaseSchema } from "./base-schema";
+import { BaseSchema } from "../base/base-schema";
 
 
 export class MapSchema<const TName extends string = string, TItem = any, const TKeys extends string | string[] = string>

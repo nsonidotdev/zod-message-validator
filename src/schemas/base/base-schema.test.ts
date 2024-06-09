@@ -42,6 +42,16 @@ describe('BaseSchema', () => {
         expect(() => testBaseSchema.validate('invalid data')).toThrow()
     })
 
+    it('Should throw an error on name mismatch', () => {
+        expect(() => testBaseSchema.validate({
+            name: 'invalid-name',
+            content: {
+                name: 'Oleksandr',
+                age: 21,
+            },
+        })).toThrow()
+    })
+
     it('Should throw error on invalid part of data data ', () => {
         expect(() => testBaseSchema.validate({
             name: 'base-schema',
