@@ -1,3 +1,2 @@
-export abstract class BaseSchema {
-
-}
+export { MetaSchema } from './meta-schema';
+export { MapSchema } from './map-schema';
