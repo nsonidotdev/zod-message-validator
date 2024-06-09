@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { SchemaData } from "../types/schemas";
+import { SchemaData } from "../../types/schemas";
 
 export class BaseSchema<const TName extends string = string, TContent = any> {
     private _schema: z.ZodType<SchemaData<TContent, TName>>

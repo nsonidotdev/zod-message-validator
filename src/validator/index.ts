@@ -1,6 +1,4 @@
-import { z } from "zod";
-import { MapSchema } from "../schemas";
-import { BaseSchema } from "../schemas/base-schema";
+import { BaseSchema } from "../schemas";
 
 export class Validator<const T extends BaseSchema[]> {
     schemas: BaseSchema[];
