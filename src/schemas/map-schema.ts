@@ -28,16 +28,3 @@ export class MapSchema<const TName extends string = string, TItem = any, const T
     }
 
 }
-
-const mapSchema = new MapSchema(
-    'hlwrld' as const,
-    ['egor', 'krid'] as const,
-    z.object({
-        hello: z.string(),
-        world: z.object({
-            hi: z.boolean()
-        })
-    }))
-
-
-mapSchema.validate('as1dg')

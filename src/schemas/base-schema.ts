@@ -21,10 +21,3 @@ export class BaseSchema<const TName extends string = string, TContent = any> {
         return validationResult;
     };
 }
-
-const a = new BaseSchema({
-    name: 'asdg',
-    schema: z.object({
-
-    })
-})
